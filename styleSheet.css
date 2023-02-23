@@ -1,0 +1,127 @@
+body {
+  font-size: 0.8125rem;
+  color: hsl(0, 0%, 81%);
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed", sans-serif;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  font-weight: 500;
+}
+img {
+  width: 1.6875rem;
+  border-radius: 3.125rem;
+  border-style: solid;
+  border-color: hsla(0, 0%, 81%, 0.2);
+}
+p {
+  opacity: 70%;
+  grid-area: p;
+}
+.nameImage {
+  grid-area: ig;
+  display: flex;
+  flex-direction: row;
+}
+.nameImage p {
+  opacity: 50%;
+  font-size: 0.8125rem;
+  margin-top: 0rem;
+}
+.headname {
+  margin-left: 0.625rem;
+}
+.daniel,
+.jonathan,
+.jeanette,
+.patrick,
+.kira {
+  padding: 1.3rem 2rem;
+  margin-top: 1rem;
+  border-radius: 0.7rem;
+  display: grid;
+  grid-template-areas:
+    "ig ig"
+    "h h"
+    "p p";
+  width: 15.9rem;
+  box-shadow: 1rem 1rem 3rem -3rem black;
+}
+h2 {
+  grid-area: h;
+  color: white;
+  margin-top: 0rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+a {
+  color: white;
+}
+.jeanette h2,
+.kira h2,
+.jeanette a,
+.kira a {
+  color: black;
+}
+.jeanette p,
+.kira p {
+  color: black;
+}
+.daniel {
+  background-color: hsl(263, 55%, 52%);
+  background-image: url(./images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+  background-position: 12.3rem top;
+}
+.jonathan {
+  background-color: hsl(217, 19%, 35%);
+}
+.jeanette {
+  background-color: hsl(0, 0%, 100%);
+}
+.patrick {
+  background-color: hsl(219, 29%, 14%);
+}
+.kira {
+  background-color: hsl(0, 0%, 100%);
+}
+footer {
+  margin: 4rem auto -4rem auto;
+}
+
+@media only screen and (min-width: 600px) {
+  main {
+    display: grid;
+    grid-template-columns: 25% 25% 25% auto;
+    grid-template-areas:
+      "d d jo k"
+      "je pa pa k";
+    margin: 3rem 7rem;
+  }
+  .daniel,
+  .jonathan,
+  .kira,
+  .jeanette,
+  .patrick {
+    width: auto;
+    margin: 0.75rem;
+  }
+  .daniel {
+    grid-area: d;
+    background-position: 21.8rem top;
+  }
+  .jonathan {
+    grid-area: jo;
+  }
+  .kira {
+    grid-area: k;
+  }
+  .jeanette {
+    grid-area: je;
+  }
+  .patrick {
+    grid-area: pa;
+  }
+}
